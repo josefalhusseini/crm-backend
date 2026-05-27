@@ -1,0 +1,12 @@
+{
+  "name": "Anna Karlsson",
+  "title": "VD",
+  "phone": "070-123 45 67",
+  "email": "anna.karlsson@foretag.se",
+  "address": "Storgatan 1, 411 38 Göteborg",
+  "responsibleSeller": {
+    "name": "Erik Svensson",
+    "phone": "073-987 65 43",
+    "email": "erik.svensson@salja.se"
+  }
+}

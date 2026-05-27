@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="CrmApi/CrmApi.csproj" />
+  <Project Path="CrmFunction/CrmFunction.csproj" />
+</Solution>

@@ -1,6 +1,7 @@
 using CrmApi.Core.Models;
 using Microsoft.Azure.Cosmos;
 using Microsoft.Azure.Cosmos.Linq;
+using Microsoft.Extensions.Options;
 
 namespace CrmApi.Data;
 
@@ -8,10 +9,11 @@ public class CustomerRepository
 {
     private readonly Container _container;
 
-    public CustomerRepository(CosmosClient client, IConfiguration config)
+    public CustomerRepository(CosmosClient client, IOptions<CosmosDbSettings> options)
     {
-        var db = client.GetDatabase(config["CosmosDb:DatabaseName"]);
-        _container = db.GetContainer(config["CosmosDb:ContainerName"]);
+        var settings = options.Value;
+        var db = client.GetDatabase(settings.DatabaseName);
+        _container = db.GetContainer(settings.ContainerName);
     }
 
     public async Task<IEnumerable<Customer>> GetAllAsync()

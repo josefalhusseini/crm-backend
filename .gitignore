@@ -9,9 +9,6 @@ obj/
 appsettings.Development.json
 local.settings.json
 
-## Azure Functions
-.vscode/
-
 ## NuGet
 *.nupkg
 .nuget/

@@ -24,4 +24,7 @@ public class Customer
 
     [JsonProperty("responsibleSeller")]
     public Seller ResponsibleSeller { get; set; } = new();
+
+    [JsonProperty("isNew")]
+    public bool IsNew { get; set; } = false;
 }
